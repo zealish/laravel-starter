@@ -16,6 +16,7 @@ class ClearCache extends Widget implements HasForms, HasActions
     use InteractsWithActions, InteractsWithForms;
 
     protected string $view = 'filament.widgets.clear-cache';
+    protected static ?int $sort = 1;
 
     public function clearAction(): Action
     {
@@ -33,7 +34,6 @@ class ClearCache extends Widget implements HasForms, HasActions
                 Artisan::call('view:clear');
                 Artisan::call('config:clear');
                 Artisan::call('route:clear');
-                Artisan::call('settings:clear-cache');
 
                 Notification::make()
                     ->title('Sistem Dioptimasi')

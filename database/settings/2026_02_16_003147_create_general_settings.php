@@ -11,6 +11,7 @@ return new class extends SettingsMigration
         $this->migrator->add('general.site_logo', null);
         $this->migrator->add('general.seo_keywords', 'laravel, blog, starter');
         $this->migrator->add('general.google_analytics', null);
+        $this->migrator->add('general.analytics_property_id', null);
     }
 
     public function down(): void
@@ -21,5 +22,6 @@ return new class extends SettingsMigration
         $this->migrator->delete('general.site_logo');
         $this->migrator->delete('general.seo_keywords');
         $this->migrator->delete('general.google_analytics');
+        $this->migrator->delete('general.analytics_property_id');
     }
 };

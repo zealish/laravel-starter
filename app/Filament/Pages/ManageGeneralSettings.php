@@ -41,6 +41,10 @@ class ManageGeneralSettings extends SettingsPage
                             ->placeholder('<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX"></script>...')
                             ->rows(5)
                             ->helperText('Tempelkan kode pelacakan lengkap dari Google Analytics atau GTM di sini.'),
+                        TextInput::make('analytics_property_id')
+                            ->label('Google Analytics Property ID')
+                            ->placeholder('123456789')
+                            ->helperText('Dapatkan ID ini dari Google Analytics Admin > Property Settings.'),
                     ])
             ]);
     }

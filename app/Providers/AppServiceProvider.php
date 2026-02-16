@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         Config::set('seotools.meta.defaults.title', $settings->site_name);
         Config::set('seotools.meta.defaults.description', $settings->site_description);
         Config::set('seotools.meta.defaults.keywords', [$settings->seo_keywords]);
+        Config::set('analytics.property_id', [$settings->analytics_property_id]);
 
         if ($settings->site_logo) {
             $logoUrl = asset('storage/' . $settings->site_logo);
